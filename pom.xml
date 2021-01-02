@@ -6565,9 +6565,11 @@
     <profile>
       <id>distrib</id>
       <modules>
+<!--
         <module>ftests</module>
         <module>packages</module>
         <module>server</module>
+-->
       </modules>
     </profile>
 
@@ -6575,7 +6577,9 @@
     <profile>
       <id>docker</id>
       <modules>
+<!--
         <module>docker</module>
+-->
       </modules>
     </profile>
 
