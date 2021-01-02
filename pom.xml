@@ -4398,7 +4398,7 @@
       <dependency>
         <groupId>org.apache.felix</groupId>
         <artifactId>org.apache.felix.framework</artifactId>
-        <version>4.6.0</version>
+        <version>7.0.0</version>
         <scope>test</scope>
       </dependency>
       <dependency>
