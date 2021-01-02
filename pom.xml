@@ -39,7 +39,9 @@
   </ciManagement>
 
   <modules>
+<!--
     <module>modules</module>
+-->
   </modules>
 
   <properties>
