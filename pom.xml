@@ -4515,7 +4515,7 @@
       <dependency>
         <groupId>com.typesafe.scala-logging</groupId>
         <artifactId>scala-logging_2.12</artifactId>
-        <version>3.9.0</version>
+        <version>3.9.2</version>
       </dependency>
       <dependency>
         <groupId>org.jolokia</groupId>
