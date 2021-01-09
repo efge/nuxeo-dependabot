@@ -100,7 +100,7 @@
     <gcp.version>1.76.0</gcp.version>
     <azure.version>3.1.0</azure.version>
     <jackson1.version>1.9.11</jackson1.version>
-    <jackson.version>2.12.0</jackson.version>
+    <jackson.version>2.12.1</jackson.version>
     <bouncycastle.version>1.68</bouncycastle.version>
     <avro.version>1.9.2</avro.version>
     <xz.version>1.8</xz.version>
@@ -110,10 +110,6 @@
     <wro4j.version>1.10.1</wro4j.version>
     <osgi.version>4.3.1</osgi.version>
     <net.oauth.core.version>20100527</net.oauth.core.version>
-
-    <!-- deprecated property since removal of maven-nuxeo-plugin execution -->
-    <eclipseVersion>${project.version}</eclipseVersion>
-    <org.ops4j.pax.version>4.13.1</org.ops4j.pax.version>
     <org.apache.log4j.version>2.14.0</org.apache.log4j.version>
     <org.slf4j.version>1.7.30</org.slf4j.version>
     <gatling.version>3.3.1</gatling.version>
@@ -2899,11 +2895,6 @@
         <version>1.8</version>
       </dependency>
       <dependency>
-        <groupId>org.codehaus.plexus</groupId>
-        <artifactId>plexus-utils</artifactId>
-        <version>1.5.6</version>
-      </dependency>
-      <dependency>
         <groupId>org.osgi</groupId>
         <artifactId>org.osgi.core</artifactId>
         <version>${osgi.version}</version>
@@ -2993,7 +2984,7 @@
       <dependency>
         <groupId>com.microsoft.sqlserver</groupId>
         <artifactId>mssql-jdbc</artifactId>
-        <version>7.0.0.jre8</version>
+        <version>8.4.1.jre8</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
@@ -3090,7 +3081,7 @@
       <dependency>
         <groupId>org.mvel</groupId>
         <artifactId>mvel2</artifactId>
-        <version>2.4.10.Final</version>
+        <version>2.4.11.Final</version>
       </dependency>
 
       <dependency>
@@ -3657,7 +3648,7 @@
       <dependency>
         <groupId>com.google.oauth-client</groupId>
         <artifactId>google-oauth-client</artifactId>
-        <version>1.31.2</version>
+        <version>1.31.4</version>
         <exclusions>
           <exclusion>
             <groupId>com.google.guava</groupId>
@@ -4320,36 +4311,6 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-junit4</artifactId>
-        <version>${org.ops4j.pax.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-link-mvn</artifactId>
-        <version>${org.ops4j.pax.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-container-native</artifactId>
-        <version>${org.ops4j.pax.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.ops4j.pax.url</groupId>
-        <artifactId>pax-url-aether</artifactId>
-        <version>1.5.2</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>org.apache.felix.framework</artifactId>
-        <version>4.6.0</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
         <groupId>javax.inject</groupId>
         <artifactId>javax.inject</artifactId>
         <version>1</version>
@@ -4905,27 +4866,6 @@
               </resources>
             </configuration>
           </execution>
-          <execution>
-            <id>copy-readme-parent</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.outputDirectory}/doc-parent</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>${basedir}/../</directory>
-                  <includes>
-                    <include>*.md</include>
-                    <include>readme*</include>
-                    <include>ReadMe*</include>
-                    <include>README*</include>
-                  </includes>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
         </executions>
       </plugin>
       <plugin>
@@ -4959,8 +4899,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <!-- Newer versions don't build the expected MANIFEST.MF -->
-          <version>2.3.1</version>
+          <version>3.2.0</version>
           <configuration>
             <archive>
               <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
@@ -4974,7 +4913,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.7</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>net.sourceforge.maven-taglib</groupId>
@@ -5048,11 +4987,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-eclipse-plugin</artifactId>
           <version>2.10</version>
-        </plugin>
-        <plugin>
-          <groupId>org.jvnet.maven-antrun-extended-plugin</groupId>
-          <artifactId>maven-antrun-extended-plugin</artifactId>
-          <version>1.43</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -5178,11 +5112,6 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>xml-maven-plugin</artifactId>
           <version>1.0.2</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.felix</groupId>
-          <artifactId>maven-bundle-plugin</artifactId>
-          <version>2.4.0</version>
         </plugin>
         <plugin>
           <groupId>org.nuxeo.build</groupId>
@@ -5377,7 +5306,15 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>2.6</version>
+          <version>3.2.0</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-utils</artifactId>
+              <!-- at least 3.2.1 to fix https://github.com/codehaus-plexus/plexus-utils/issues/63 -->
+              <version>3.3.0</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>net.sf.alchim</groupId>
@@ -5491,7 +5428,7 @@
         <plugin>
           <groupId>org.owasp</groupId>
           <artifactId>dependency-check-maven</artifactId>
-          <version>5.2.4</version>
+          <version>6.0.5</version>
           <!-- run manually with mvn -nsu -Pdistrib org.owasp:dependency-check-maven:aggregate -->
           <!-- report file is in target/dependency-check-report.html -->
           <configuration>

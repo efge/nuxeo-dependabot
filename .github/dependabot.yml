@@ -27,6 +27,9 @@ updates:
       - dependency-name: "io.dropwizard.metrics5:metrics-bom"
         versions: "5.0.0"
 
+      # Versions that are upgraded too often to be useful to track with dependabot
+      - dependency-name: "com.amazonaws:aws-java-sdk-*"
+
       # Major version bumps that probably require code changes
       - dependency-name: "jline:jline"
         versions: "[1.0,)"
