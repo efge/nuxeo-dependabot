@@ -76,7 +76,7 @@
     <elasticsearch.version>7.9.2</elasticsearch.version> <!-- when changing this make sure JNA version is in sync -->
     <jna.version>4.5.2</jna.version>
     <apacheds.version>1.5.1</apacheds.version>
-    <apachedshared.version>0.9.7</apachedshared.version>
+    <apachedshared.version>0.9.19</apachedshared.version>
     <guice.version>3.0</guice.version>
     <jersey.version>1.19.4</jersey.version>
     <shindig.version>1.1-BETA5-incubating-nx2</shindig.version>
