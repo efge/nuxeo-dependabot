@@ -2913,7 +2913,7 @@
       <dependency>
         <groupId>org.yaml</groupId>
         <artifactId>snakeyaml</artifactId>
-        <version>1.27</version>
+        <version>1.28</version>
       </dependency>
       <!-- beanshell ; Jetty use 1.3.0 -->
       <dependency>
