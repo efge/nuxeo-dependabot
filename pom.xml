@@ -98,7 +98,7 @@
     <jackson1.version>1.9.11</jackson1.version>
     <jackson.version>2.12.1</jackson.version>
     <bouncycastle.version>1.68</bouncycastle.version>
-    <avro.version>1.9.2</avro.version>
+    <avro.version>1.10.2</avro.version>
     <xz.version>1.8</xz.version>
     <restlet.version>2.4.3</restlet.version>
     <batik.version>1.13</batik.version>
