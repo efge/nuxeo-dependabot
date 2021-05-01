@@ -2935,7 +2935,7 @@
       <dependency>
         <groupId>org.postgresql</groupId>
         <artifactId>postgresql</artifactId>
-        <version>42.2.18</version>
+        <version>42.2.20</version>
       </dependency>
       <dependency>
         <groupId>mysql</groupId>
