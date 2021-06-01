@@ -108,7 +108,7 @@
     <net.oauth.core.version>20100527</net.oauth.core.version>
     <org.apache.log4j.version>2.14.0</org.apache.log4j.version>
     <org.slf4j.version>1.7.30</org.slf4j.version>
-    <gatling.version>3.3.1</gatling.version>
+    <gatling.version>3.6.0</gatling.version>
     <jgiven.version>0.18.2</jgiven.version>
 
     <nuxeo.skip.enforcer>false</nuxeo.skip.enforcer>
